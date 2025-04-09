@@ -40,7 +40,7 @@ const Footer = () => {
           <MdOutlineEmail size={22} />
         </a>
         <a
-          href="tel:+9142883832"
+          href="tel:+919142883832"
           className="w-12 h-12 flex items-center justify-center rounded-full border border-white hover:bg-white hover:text-[#465697] transition-all duration-300"
         >
           <FiPhone size={20} />
