@@ -1,22 +1,32 @@
+import { useState } from "react";
 import Navbar from "./Components/Navbar/Navbar";
 import Home from "./Components/Home/Home";
 import About from "./Components/About/About";
 import Experience from "./Components/Skills/Skills";
 import Projects from "./Components/Projects/Projects";
 import Footer from "./Components/Footer/Footer";
-function App(){
-  return (
-    <div className="bg-[#171d32] h-auto w-full overflow-hidden">
-      <Navbar />
-      <Home />
-      <About />
-      <Experience />
-      <Projects />
-      <Footer />
-      
-     
+import LoadingScreen from "./Components/LoadingScreen/LoadingScreen";
+import StarsBackground from "./Components/StarsBackground"; // Import the StarsBackground component
 
-    </div>
-  )
+function App() {
+  const [loading, setLoading] = useState(true);
+
+  return (
+    <>
+      <StarsBackground /> {/* Apply the background everywhere */}
+      {loading && <LoadingScreen onFinish={() => setLoading(false)} />}
+      {!loading && (
+        <div className="bg-transparent h-auto w-full overflow-hidden">
+          <Navbar />
+          <Home />
+          <About />
+          <Experience />
+          <Projects />
+          <Footer />
+        </div>
+      )}
+    </>
+  );
 }
+
 export default App;
