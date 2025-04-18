@@ -14,10 +14,12 @@ const Home = () => {
           nature of acquiring knowledge.
         </p>
         <a
-  href="mailto:snehals0203@gmail.com"
+  href="https://drive.google.com/file/d/1GrhLzslE_0vzKarOjE0Db7nJrTfTN73T/view?usp=drive_link"
+  target="_blank"
+  rel="noopener noreferrer"
   className="inline-block mt-5 md:mt-10 text-white py-2 px-3 text-sm md:text-lg md:py-2 md:px-4 hover:opacity-85 duration-300 hover:scale-105 font-semibold rounded-3xl bg-[#465697]"
 >
-  Contact Me
+  Download CV
 </a>
       </div>
       <div>
