@@ -1,122 +1,107 @@
 import React from "react";
 import {
   FaCss3, FaFigma, FaHtml5, FaJs, FaReact,
-  FaJava, FaPython, FaNodeJs, FaAndroid, FaAmazon, FaGoogle, FaGithub
+  FaJava, FaPython, FaNodeJs, FaAndroid, FaGithub
 } from "react-icons/fa";
 import {
-  SiRedis, SiMongodb, SiExpress, SiSpringboot,
+  SiRedis, SiMongodb, SiExpress, SiSpringboot, SiDjango, SiFlask,
   SiMysql, SiTypescript, SiC, SiCplusplus, SiKotlin,
-  SiCanva, SiNextdotjs, SiPostgresql, SiOracle, SiSqlite, SiDocker
+  SiCanva, SiNextdotjs, SiPostgresql, SiOracle, SiSqlite, SiDocker, SiGo
 } from "react-icons/si";
-import { RiNetflixFill } from "react-icons/ri";
+import { motion } from "framer-motion";
 
 const Experience = () => {
   return (
-    <div id="Experience" className="p-10 md:p-24">
-      <h1 className="text-2xl md:text-4xl text-white font-bold">Skills</h1>
-      <div className="flex flex-wrap items-start justify-around">
+    <div id="Experience" className="p-10 md:p-24 bg-gradient-to-br from-black via-gray-900 to-black min-h-screen">
+      <h1 className="text-4xl font-extrabold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-cyan-400">
+        Skills
+      </h1>
 
-        {/* Frontend Technologies */}
-        <div className="flex flex-col gap-4 md:w-2/5 p-4">
-          <h2 className="text-white text-lg font-semibold">Frontend</h2>
-          <div className="flex flex-wrap gap-4">
-            <Skill icon={<FaHtml5 color="#E34F26" size={50} />} />
-            <Skill icon={<FaCss3 color="#1572B6" size={50} />} />
-            <Skill icon={<FaJs color="#F7DF1E" size={50} />} />
-            <Skill icon={<FaReact color="#61DAFB" size={50} />} />
-            <Skill icon={<SiNextdotjs color="white" size={50} />} />
-            <Skill icon={<SiTypescript color="#3178C6" size={50} />} />
-            <Skill icon={<FaFigma color="#F24E1E" size={50} />} />
-            <Skill icon={<SiCanva color="#00C4CC" size={50} />} />
-          </div>
-        </div>
-
-        {/* Backend Technologies */}
-        <div className="flex flex-col gap-4 md:w-2/5 p-4">
-          <h2 className="text-white text-lg font-semibold">Backend</h2>
-          <div className="flex flex-wrap gap-4">
-            <Skill icon={<FaNodeJs color="#339933" size={50} />} />
-            <Skill icon={<SiExpress color="#000000" size={50} />} />
-            <Skill icon={<SiSpringboot color="#6DB33F" size={50} />} />
-            <Skill icon={<SiRedis color="#FF4438" size={50} />} />
-          </div>
-        </div>
-
-        {/* Databases */}
-        <div className="flex flex-col gap-4 md:w-2/5 p-4">
-          <h2 className="text-white text-lg font-semibold">Database</h2>
-          <div className="flex flex-wrap gap-4">
-            <Skill icon={<SiMongodb color="#47A248" size={50} />} />
-            <Skill icon={<SiMysql color="#00758F" size={50} />} />
-            <Skill icon={<SiPostgresql color="#336791" size={50} />} />
-            <Skill icon={<SiOracle color="#F80000" size={50} />} />
-            <Skill icon={<SiSqlite color="#003B57" size={50} />} />
-          </div>
-        </div>
-
-        {/* Other Skills */}
-        <div className="flex flex-col gap-4 md:w-2/5 p-4">
-          <h2 className="text-white text-lg font-semibold">Other Skills</h2>
-          <div className="flex flex-wrap gap-4">
-            <Skill icon={<SiC color="#A8B9CC" size={50} />} />
-            <Skill icon={<SiCplusplus color="#00599C" size={50} />} />
-            <Skill icon={<FaJava color="#007396" size={50} />} />
-            <Skill icon={<FaPython color="#3776AB" size={50} />} />
-            <Skill icon={<SiKotlin color="#7F52FF" size={50} />} />
-            <Skill icon={<FaAndroid color="#3DDC84" size={50} />} />
-            <Skill icon={<SiDocker color="#0db7ed" size={50} />} />
-            <Skill icon={<FaGithub color="white" size={50} />} />
-          </div>
-        </div>
-
-        {/* Experience section commented out */}
-        {/*
-        <div>
-          <div className="flex gap-10 bg-slate-950 bg-opacity-45 mt-4 rounded-lg p-4 items-center">
-            <FaGoogle color="#4285F4" size={50} />
-            <span className="text-white">
-              <h2 className="leading-tight">Software Engineer , Google</h2>
-              <p className="text-sm leading-tight font-thin">Sept 2023 - Present</p>
-              <ul className="text-sm p-2">
-                <li>- Work as software developer</li>
-                <li>- Senior SDE-developer</li>
-              </ul>
-            </span>
-          </div>
-          <div className="flex gap-10 bg-slate-950 bg-opacity-45 mt-4 rounded-lg  p-4 items-center">
-            <RiNetflixFill color="#E50914" size={50} />
-            <span className="text-white">
-              <h2 className="leading-tight">Software Engineer, Google</h2>
-              <p className="text-sm leading-tight font-thin">Sept 2023 - Present</p>
-              <ul className="text-sm p-2">
-                <li>- Work as software developer.</li>
-                <li>- Senior SDE-developer</li>
-              </ul>
-            </span>
-          </div>
-          <div className="flex gap-10 bg-slate-950 bg-opacity-45 mt-4 rounded-lg  p-4 items-center">
-            <FaAmazon color="#FF9900" size={50} />
-            <span className="text-white">
-              <h2 className="leading-tight">Software Engineer, Google</h2>
-              <p className="text-sm leading-tight font-thin">Sept 2023 - Present</p>
-              <ul className="text-sm p-2">
-                <li>- Work as software developer.</li>
-                <li>- Senior SDE-developer</li>
-              </ul>
-            </span>
-          </div>
-        </div>
-        */}
+      <div className="flex flex-wrap justify-center gap-12">
+        {skillSections.map((section, idx) => (
+          <motion.div
+            key={idx}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: idx * 0.2 }}
+            viewport={{ once: true }}
+            className="w-full sm:w-[70%] md:w-[45%] lg:w-[30%] bg-white/10 border border-white/20 backdrop-blur-md rounded-2xl shadow-xl p-6 hover:shadow-purple-500/20 transition-all"
+          >
+            <h2 className="text-white text-xl font-semibold mb-4">{section.title}</h2>
+            <div className="flex flex-wrap gap-3 justify-center">
+              {section.icons.map((item, index) => (
+                <Skill icon={item.icon} name={item.name} key={index} />
+              ))}
+            </div>
+          </motion.div>
+        ))}
       </div>
     </div>
   );
 };
 
-// Reusable Skill icon block
-const Skill = ({ icon }) => (
-  <span className="p-3 bg-zinc-950 flex items-center justify-center rounded-2xl">
-    {icon}
-  </span>
+// Reusable compact Skill icon with name
+const Skill = ({ icon, name }) => (
+  <motion.div
+    whileHover={{ scale: 1.1, rotate: 2 }}
+    transition={{ type: "spring", stiffness: 300 }}
+    className="flex flex-col items-center justify-center w-20 h-20 p-2 bg-zinc-900/60 rounded-xl border border-white/10 shadow-sm hover:shadow-md hover:shadow-purple-400/20 text-center"
+  >
+    <div className="text-2xl mb-1">{icon}</div>
+    <p className="text-xs text-white text-center">{name}</p>
+  </motion.div>
 );
+
+const skillSections = [
+  {
+    title: "Frontend",
+    icons: [
+      { icon: <FaHtml5 color="#E34F26" />, name: "HTML5" },
+      { icon: <FaCss3 color="#1572B6" />, name: "CSS3" },
+      { icon: <FaJs color="#F7DF1E" />, name: "JavaScript" },
+      { icon: <FaReact color="#61DAFB" />, name: "React.js" },
+      { icon: <SiNextdotjs color="white" />, name: "Next.js" },
+      { icon: <SiTypescript color="#3178C6" />, name: "TypeScript" },
+      { icon: <FaFigma color="#F24E1E" />, name: "Figma" },
+      { icon: <SiCanva color="#00C4CC" />, name: "Canva" },
+    ],
+  },
+  {
+    title: "Backend",
+    icons: [
+      { icon: <FaNodeJs color="#339933" />, name: "Node.js" },
+      { icon: <SiExpress color="#000000" />, name: "Express.js" },
+      { icon: <SiSpringboot color="#6DB33F" />, name: "Spring Boot" },
+      { icon: <SiRedis color="#FF4438" />, name: "Redis" },
+      { icon: <SiDjango color="#092E20" />, name: "Django" },
+      { icon: <SiFlask color="#000000" />, name: "Flask" },
+      { icon: <SiGo color="#00ADD8" />, name: "Go" },
+    ],
+  },
+  {
+    title: "Database",
+    icons: [
+      { icon: <SiMongodb color="#47A248" />, name: "MongoDB" },
+      { icon: <SiMysql color="#00758F" />, name: "MySQL" },
+      { icon: <SiPostgresql color="#336791" />, name: "PostgreSQL" },
+      { icon: <SiOracle color="#F80000" />, name: "Oracle" },
+      { icon: <SiSqlite color="#003B57" />, name: "SQLite" },
+    ],
+  },
+  {
+    title: "Other Skills",
+    icons: [
+      { icon: <SiC color="#A8B9CC" />, name: "C" },
+      { icon: <SiCplusplus color="#00599C" />, name: "C++" },
+      { icon: <FaJava color="#007396" />, name: "Java" },
+      { icon: <FaPython color="#3776AB" />, name: "Python" },
+      { icon: <SiKotlin color="#7F52FF" />, name: "Kotlin" },
+      { icon: <FaAndroid color="#3DDC84" />, name: "Android" },
+      { icon: <SiDocker color="#0db7ed" />, name: "Docker" },
+      { icon: <FaGithub color="white" />, name: "GitHub" },
+    
+    ],
+  },
+];
 
 export default Experience;

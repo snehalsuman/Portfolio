@@ -29,10 +29,10 @@ const TextChange = () => {
   }, [endValue, isForward, index]);
 
   return (
-    <div className="transition ease duration-300 text-xl md:text-6xl font-bold leading-normal tracking-tighter text-[#e0d6c9]">
-      {currenText}
-      <span className="animate-pulse text-white">|</span>
-    </div>
+    <div className="transition ease duration-300 text-xl md:text-6xl font-bold leading-normal tracking-tighter bg-gradient-to-r from-purple-400 to-cyan-400 text-transparent bg-clip-text">
+  {currenText}
+  <span className="animate-pulse text-white">|</span>
+</div>
   );
 };
 

@@ -8,9 +8,11 @@ import cert3 from "../../assets/dbms.png";
 
 const Certificate = () => {
   return (
-    <div id="Certifications" className="p-10 md:p-24 text-white">
-      <h1 className="text-2xl md:text-4xl text-white font-bold">Certifications</h1>
-      <div className="py-12 px-8 flex flex-wrap gap-5">
+    <div id="Certifications" className="p-10 md:p-24 bg-gradient-to-br from-black via-gray-900 to-black min-h-screen text-white">
+      <h1 className="text-4xl md:text-5xl font-extrabold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-cyan-400">
+        Certifications
+      </h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 justify-items-center">
         <CertificateCard
           title="Full Stack Software Development"
           description="Completed a full stack development course covering MongoDB, Express.js, React, and Node.js (MERN stack)."

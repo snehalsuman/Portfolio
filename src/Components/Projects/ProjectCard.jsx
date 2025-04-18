@@ -1,29 +1,34 @@
 import React from "react";
+import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
 const ProjectCard = ({ title, main, image, demoLink, codeLink }) => {
   return (
-    <div className="p-3 md:p-6 flex flex-col w-80 bg-[#0c0e19] shadow-xl shadow-slate-900 rounded-2xl">
-      <img className="p-4 rounded-xl" src={image} alt={title} />
-      <h3 className="px-4 text-xl md:text-2xl font-bold leading-normal">
-        {title}
-      </h3>
-      <p className="px-4 text-sm md:text-md leading-tight py-2">{main}</p>
-      <div className="mt-2 p-2 md:p-4 flex gap-2 md:gap-4">
+    <div className="p-6 w-[380px] md:w-[440px] bg-[#0f172a]/60 backdrop-blur-md border border-white/10 shadow-[0_8px_30px_rgba(0,0,0,0.25)] rounded-3xl transition duration-300 hover:shadow-[0_10px_40px_rgba(112,66,255,0.5)]">
+      <img
+        className="w-full h-[220px] object-cover rounded-xl mb-4 border border-white/10"
+        src={image}
+        alt={title}
+      />
+      <h3 className="text-2xl font-bold text-[#b193fa]">{title}</h3>
+      <p className="text-[#cbd5e1] text-sm mt-2">{main}</p>
+      <div className="flex flex-wrap gap-4 mt-6">
         <a
           href={demoLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="md:mt-10 text-white py-2 px-3 text-sm md:text-lg md:py-2 md:px-4 hover:opacity-85 duration-300 hover:scale-105 font-semibold rounded-3xl bg-[#465697]"
+          className="inline-flex items-center gap-2 bg-[#7e5bef] hover:bg-[#9b74ff] text-white font-bold py-2 px-5 rounded-full transition-all duration-300"
         >
-          Demo
+          <FaExternalLinkAlt className="text-sm" />
+          Live Demo
         </a>
         <a
           href={codeLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="md:mt-10 text-white py-2 px-3 text-sm md:text-lg md:py-2 md:px-4 hover:opacity-85 duration-300 hover:scale-105 font-semibold rounded-3xl bg-[#465697]"
+          className="inline-flex items-center gap-2 bg-[#7e5bef] hover:bg-[#9b74ff] text-white font-bold py-2 px-5 rounded-full transition-all duration-300"
         >
-          Source Code
+          <FaGithub className="text-sm" />
+          View Code
         </a>
       </div>
     </div>
