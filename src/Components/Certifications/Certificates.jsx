@@ -24,7 +24,7 @@ const Certificate = () => {
           link="https://drive.google.com/file/d/1kI3J_SOYohHbO_Z39G5POOSnHT1eqH6U/view?usp=sharing"
         />
         <CertificateCard
-          title="Database Management System and SQL"
+          title="DBMS and SQL"
           description="Acquired a solid foundation in DBMS concepts and practical SQL querying for relational databases."
           image={cert3}
           link="https://drive.google.com/file/d/1_jkdfWozxayH76Kv8fPF_CdizgzM5JiM/view?usp=sharing"
