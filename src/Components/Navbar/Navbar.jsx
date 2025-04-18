@@ -8,7 +8,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20); // Fades navbar on scroll
+      setScrolled(window.scrollY > 20); // Track scroll
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -19,13 +19,13 @@ const Navbar = () => {
     <nav
       className={`fixed top-0 w-full z-50 px-10 pt-6 md:px-20 transition-all duration-300 ${
         scrolled
-          ? "bg-[#0f172a]/80 backdrop-blur-md shadow-lg shadow-black/30"
-          : "bg-transparent backdrop-blur-md"
+          ? "bg-black/70 backdrop-blur-lg shadow-md" // Faded + blur on scroll
+          : "bg-black"
       }`}
     >
       <div className="flex flex-wrap justify-between items-center text-white">
         {/* Logo */}
-        <span className="text-2xl font-bold tracking-wide transition-transform duration-300 hover:scale-110">
+        <span className="text-2xl font-bold tracking-wide transition-transform duration-300 hover:scale-110 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">
           Portfolio
         </span>
 
@@ -38,7 +38,7 @@ const Navbar = () => {
           {["About", "Experience", "Projects", "Certifications", "Contact"].map(
             (item, idx) => (
               <a key={idx} href={`#${item}`}>
-                <li className="text-md transition-all duration-300 p-2 md:p-0 hover:text-[#cec2b4] hover:drop-shadow-[0_0_5px_#cec2b4] hover:scale-105">
+                <li className="text-md transition-all duration-300 p-2 md:p-0 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-purple-400 hover:to-cyan-400 hover:scale-105">
                   {item === "Experience" ? "Skills" : item}
                 </li>
               </a>

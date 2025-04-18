@@ -1,17 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap');
+
+* {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Glowing Stars Background */
 .star-bg {
-    background: transparent url("https://www.transparenttextures.com/patterns/stardust.png");
-    background-size: cover;
-    animation: starsMove 90s linear infinite;
-    opacity: 0.3;
-    pointer-events: none;
-    z-index: 0;
+  background: transparent url("https://www.transparenttextures.com/patterns/stardust.png");
+  background-size: 600px 600px;
+  animation: starsMove 100s linear infinite;
+  opacity: 0.25; /* increase for stronger presence */
+  pointer-events: none;
+  z-index: 0;
+
+  /* 👇 Glow effect */
+  filter: brightness(2.2) drop-shadow(0 0 4px rgba(255, 255, 255, 0.4));
+  mix-blend-mode: screen; /* helps blend glow with dark bg */
+}
+
+@keyframes starsMove {
+  0% {
+    background-position: 0 0;
   }
-  
-  @keyframes starsMove {
-    0% {
-      background-position: 0 0;
-    }
-    100% {
-      background-position: -1000px 1000px;
-    }
+  100% {
+    background-position: -1200px 1200px;
   }
+}
+
+/* 🔮 Main glow heading text */
+@keyframes pulseGlow {
+  0% {
+    text-shadow: 0 0 2px #a855f7;
+  }
+  50% {
+    text-shadow: 0 0 5px #6366f1;
+  }
+  100% {
+    text-shadow: 0 0 2px #a855f7;
+  }
+}
+
+.glow-text {
+  animation: pulseGlow 3s ease-in-out infinite;
+  color: #ffffff;
+}
+
+/* ✨ Minimal glow for Snehal Suman */
+@keyframes nameSoftGlow {
+  0% {
+    text-shadow: 0 0 0.5px #8b5cf6;
+  }
+  50% {
+    text-shadow: 0 0 1px #8b5cf6;
+  }
+  100% {
+    text-shadow: 0 0 0.5px #8b5cf6;
+  }
+}
+
+.gradient-name {
+  background: linear-gradient(to right, #a855f7, #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: nameSoftGlow 4s ease-in-out infinite;
+}

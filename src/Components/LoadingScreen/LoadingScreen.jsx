@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
-import "./LoadingScreen.css"; // You'll need to create this CSS file
+import "./LoadingScreen.css";
 
 const LoadingScreen = ({ onFinish }) => {
   const [show, setShow] = useState(true);
@@ -36,59 +36,49 @@ const LoadingScreen = ({ onFinish }) => {
     <AnimatePresence>
       {show && (
         <motion.div
-          className="fixed top-0 left-0 w-full h-full bg-[#0f172a] flex items-center justify-center z-50 overflow-hidden"
+          className="fixed top-0 left-0 w-full h-full bg-gradient-to-br from-black via-gray-900 to-black flex flex-col items-center justify-center z-50 overflow-hidden"
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 1 }}
         >
-          {/* ⭐ Starry background */}
+          {/* Optional subtle star background */}
           <div className="star-bg absolute inset-0 z-0" />
 
-          {/* Animated Glow */}
+          {/* Animated Glow Background */}
           <motion.div
-            className="absolute w-[600px] h-[600px] bg-gradient-to-br from-[#6366f1] to-[#a855f7] rounded-full opacity-20 blur-3xl z-0"
-            animate={{
-              scale: [1, 1.1, 1],
-              opacity: [0.2, 0.3, 0.2],
-            }}
-            transition={{
-              repeat: Infinity,
-              duration: 3,
-              ease: "easeInOut",
-            }}
+            className="absolute w-[600px] h-[600px] bg-gradient-to-br from-[#6366f1] to-[#a855f7] rounded-full opacity-25 blur-3xl z-0"
+            animate={{ scale: [1, 1.05, 1], opacity: [0.2, 0.35, 0.2] }}
+            transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
           />
 
-          {/* Content */}
+          {/* Text Content */}
           <motion.div
             initial={{ scale: 0.95, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1 }}
             className="relative text-center z-10"
           >
-            {/* Slide-in "Welcome to my" */}
             <motion.h1
-              className="text-white text-6xl md:text-7xl font-bold mb-4"
-              initial={{ x: -100, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
+              className="text-white text-5xl md:text-6xl font-semibold mb-3 glow-text"
+              initial={{ y: -50, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 1, ease: "easeOut" }}
             >
               Welcome to my
             </motion.h1>
 
-            {/* Zoom-in "Portfolio Website" */}
-            <motion.h1
-              className="text-[#6366f1] text-5xl md:text-6xl font-bold mb-4"
-              initial={{ scale: 0.5, opacity: 0 }}
+            <motion.h2
+              className="text-5xl md:text-6xl font-bold mb-5 bg-gradient-to-r from-purple-400 to-blue-400 text-transparent bg-clip-text"
+              initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ type: "spring", stiffness: 80, delay: 0.3 }}
             >
               Portfolio Website
-            </motion.h1>
+            </motion.h2>
 
-            {/* Typing Name (no cursor) */}
-            <h2 className="text-white text-4xl md:text-4xl font-medium tracking-wide">
+            <h3 className="text-3xl md:text-4xl font-semibold tracking-wide gradient-name">
               {fullName.slice(0, nameIndex)}
-            </h2>
+            </h3>
           </motion.div>
         </motion.div>
       )}
