@@ -31,11 +31,11 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <ul
-          className={`${
+          className={`$${
             menu ? "block" : "hidden"
           } mx-24 mt-4 font-semibold bg-black bg-opacity-30 px-4 py-2 rounded-xl text-center md:bg-transparent md:static md:mt-0 md:mx-0 md:flex gap-6`}
         >
-          {["About", "Experience", "Projects", "Certifications", "Contact"].map(
+          {["About", "Experience", "Projects", "Certifications", "Achievements", "Contact"].map(
             (item, idx) => (
               <a key={idx} href={`#${item}`}>
                 <li className="text-md transition-all duration-300 p-2 md:p-0 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-purple-400 hover:to-cyan-400 hover:scale-105">
