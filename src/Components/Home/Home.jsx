@@ -34,14 +34,14 @@ const Home = () => {
             📄 Download CV
           </a>
 
-          <a
+          {/* <a
             href="https://drive.google.com/file/d/1yF8XmnSo_5xSNe-0jjqse3gryJmHrtzq/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white font-semibold px-6 py-3 rounded-full hover:scale-105 hover:opacity-90 transition-all duration-300 shadow-lg shadow-cyan-900/40"
           >
             🎥 Video CV
-          </a>
+          </a> */}
         </div>
       </motion.div>
 
